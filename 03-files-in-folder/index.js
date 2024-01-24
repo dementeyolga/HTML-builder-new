@@ -12,9 +12,9 @@ function logDirFiles(pathToDir) {
             if (err) console.log(err);
             let name = file.name;
             console.log(
-              `${name.slice(0, file.name.lastIndexOf('.'))} ${name.slice(
-                file.name.lastIndexOf('.'),
-              )} ${Math.trunc((stats.size / 1024) * 1000) / 1000}kb`,
+              `${name.slice(0, file.name.lastIndexOf('.'))} - ${name.slice(
+                file.name.lastIndexOf('.') + 1
+              )} - ${Math.trunc((stats.size / 1024) * 1000) / 1000}kb`,
             );
           });
         }
